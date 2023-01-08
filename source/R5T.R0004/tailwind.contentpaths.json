@@ -1,0 +1,5 @@
+[
+    "./Components/**/*.razor",
+    "./Pages/**/*.razor",
+    "./wwwroot/**/*.html"
+]
