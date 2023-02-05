@@ -1,0 +1,34 @@
+﻿@*
+    An element that wraps a section containing headings that participate in the table of contents.
+    A cascading value is used to pass a table-of-contents node tree around.
+*@
+
+@using R5T.R0004.Internal
+
+
+@namespace R5T.R0004
+
+@*Can IsFixed be true? The object reference never changes, even though the object contents do. But rendering the value is handled outside of Blazor, so ok?*@
+<CascadingValue
+    Name="NodeTree"
+    Value="this.NodeTree">
+
+    <R5T.R0004.Internal.TableOfContentsOutlet
+        NotificationChannelName="@this.InstanceSpecificChannelName" />
+
+    @this.ChildContent
+
+    <TableOfContentsContextEnd
+        NotificationChannelName="@this.InstanceSpecificChannelName" />
+</CascadingValue>
+
+
+@code {
+    private string InstanceSpecificChannelName = F0000.GuidOperator.Instance.ToString_Standard(
+            F0000.GuidOperator.Instance.New());
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private TableOfContentsNodeTree NodeTree { get; } = new TableOfContentsNodeTree();
+}

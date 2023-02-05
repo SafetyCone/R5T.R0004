@@ -1,0 +1,21 @@
+﻿@using R5T.R0004.Internal
+
+
+@namespace R5T.R0004
+
+@inherits HeadingBase
+
+
+<h1>@this.Value</h1>
+
+@if (this.IncludeInTableOfContents)
+{
+    <TableOfContentsContent
+        Identity="@this.Identity"
+        Text="@this.Value"
+        Level="1" />
+}
+
+@code {
+    //See heading base.
+}

@@ -1,0 +1,22 @@
+﻿
+
+@namespace R5T.R0004.Internal
+
+
+<li>
+    <a href="#@this.Node.Identity">@this.Node.Text</a>
+    <ul>
+        @foreach (var child in this.ChildRenderFragments)
+        {
+            @child
+        }
+    </ul>
+</li>
+
+@code {
+    [Parameter]
+    public TableOfContentsNode Node { get; set; }
+
+    [Parameter]
+    public RenderFragment[] ChildRenderFragments { get; set; }
+}
