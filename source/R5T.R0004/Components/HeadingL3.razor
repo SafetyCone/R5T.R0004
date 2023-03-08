@@ -6,16 +6,21 @@
 @inherits HeadingBase
 
 
-<h3>@this.Value</h3>
+<h3 id="@this.Identity">@this.HeadingText</h3>
 
 @if (this.IncludeInTableOfContents)
 {
     <TableOfContentsContent
         Identity="@this.Identity"
-        Text="@this.Value"
-        Level="3" />
+        Text="@this.TableOfContentsText"
+        Level="@this.Level" />
 }
 
 @code{
     //See heading base.
+
+    public HeadingL3()
+    {
+        this.Level = 3;
+    }
 }

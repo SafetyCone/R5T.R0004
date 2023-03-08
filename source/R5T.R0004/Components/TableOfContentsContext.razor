@@ -13,8 +13,12 @@
     Name="NodeTree"
     Value="this.NodeTree">
 
-    <R5T.R0004.Internal.TableOfContentsOutlet
-        NotificationChannelName="@this.InstanceSpecificChannelName" />
+    <div class="table-of-contents">
+        @(this.StyleOutput)
+
+        <R5T.R0004.Internal.TableOfContentsOutlet
+            NotificationChannelName="@this.InstanceSpecificChannelName" />
+    </div>
 
     @this.ChildContent
 
@@ -26,6 +30,9 @@
 @code {
     private string InstanceSpecificChannelName = F0000.GuidOperator.Instance.ToString_Standard(
             F0000.GuidOperator.Instance.New());
+
+    [Parameter]
+    public RenderFragment StyleOutput { get; set; } = @<DefaultStyleOutput/>;
 
     [Parameter]
     public RenderFragment ChildContent { get; set; }
