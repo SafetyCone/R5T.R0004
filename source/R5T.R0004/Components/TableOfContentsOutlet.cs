@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Components;
 using System.Extensions;
 
 using R5T.D0119;
+using R5T.T0154;
 
 
 namespace R5T.R0004.Internal
 {
+    [RazorComponentMarker]
     public class TableOfContentsOutlet : IComponent
     {
         private RenderHandle RenderHandle { get; set; }
@@ -37,8 +39,6 @@ namespace R5T.R0004.Internal
 
         public Task SetParametersAsync(ParameterView parameters)
         {
-            Console.WriteLine("Called how many times?");
-
             parameters.SetParameterProperties(this);
 
             // The set parameters method might be called multiple times (for example, when changing the component and reloading, to detect differences).

@@ -3,9 +3,12 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Components;
 
+using R5T.T0154;
+
 
 namespace R5T.R0004.Internal
 {
+    [RazorComponentMarker]
     public class TableOfContentsContent : IComponent
     {
         /// <summary>

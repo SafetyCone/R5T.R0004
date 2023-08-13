@@ -7,17 +7,16 @@ Otherwise you would have to make static ToC HTML, and as you move sections aroun
 
 ## Example Usage
 
-
-    <TableOfContentsContext>
-        <HeadingL2 Value="How to see <meta> tags" Level="1"/>
-
-
-        <HeadingL2 Value="The Basics" Level="1" />
+<TableOfContentsContext>
+    <HeadingL2 Value="How to see <meta> tags" Level="1"/>
 
 
-        <HeadingL3 Value="<title>" Level="2" />
+    <HeadingL2 Value="The Basics" Level="1" />
 
 
-        <HeadingL3 Value="Description-<meta>" Level="2" />
+    <HeadingL3 Value="<title>" Level="2" />
 
-    </TableOfContentsContext>
+
+    <HeadingL3 Value="Description-<meta>" Level="2" />
+
+</TableOfContentsContext>

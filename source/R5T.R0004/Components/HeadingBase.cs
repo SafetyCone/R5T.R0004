@@ -2,9 +2,12 @@
 
 using Microsoft.AspNetCore.Components;
 
+using R5T.T0154;
+
 
 namespace R5T.R0004
 {
+    [RazorComponentMarker]
     public class HeadingBase : ComponentBase
     {
         /// <summary>
