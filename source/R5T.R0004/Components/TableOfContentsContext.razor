@@ -31,8 +31,8 @@
 
 
 @code {
-    private string InstanceSpecificChannelName = F0000.GuidOperator.Instance.ToString_Standard(
-            F0000.GuidOperator.Instance.New());
+    private string InstanceSpecificChannelName = Instances.GuidOperator.To_String_Standard(
+            Instances.GuidOperator.New());
 
     [Parameter]
     public RenderFragment StyleOutput { get; set; } = @<DefaultStyleOutput/>;
